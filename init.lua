@@ -18,7 +18,7 @@ return {
   },
 
   -- Set colorscheme to use
-  colorscheme = "astrodark",
+  colorscheme = "sonokai",
 
   -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
   diagnostics = {
@@ -31,7 +31,7 @@ return {
     formatting = {
       -- control auto formatting on save
       format_on_save = {
-        enabled = true, -- enable or disable format on save globally
+        enabled = false, -- enable or disable format on save globally
         allow_filetypes = { -- enable format on save for specified filetypes only
           -- "go",
         },
@@ -48,6 +48,11 @@ return {
       --   return true
       -- end
     },
+
+    capabilities = {
+      offsetEncoding = { "utf-16" },
+    },
+
     -- enable servers that you already have installed without mason
     servers = {
       -- "pyright"
@@ -70,16 +75,16 @@ return {
   -- anything that doesn't fit in the normal config locations above can go here
   polish = function()
     -- Set up custom filetypes
-    -- vim.filetype.add {
-    --   extension = {
-    --     foo = "fooscript",
-    --   },
+    vim.filetype.add {
+      extension = {
+        defs = "makefile",
+      },
     --   filename = {
     --     ["Foofile"] = "fooscript",
     --   },
     --   pattern = {
     --     ["~/%.config/foo/.*"] = "fooscript",
     --   },
-    -- }
+    }
   end,
 }
