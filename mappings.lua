@@ -18,6 +18,19 @@ return {
     --   desc = "Previous buffer",
     -- },
 
+    -- tables with the `name` key will be registered with which-key if it's installed
+    -- this is useful for naming menus
+    ["<leader>b"] = { name = "Buffers" },
+    ["<leader>s"] = { name = "Spectre" },
+    ["<leader>g"] = { name = "LSP" },
+
+    -- Neotree
+    ["<F4>"] = { "<cmd>Neotree toggle<CR>", desc = "Toggle Explorer" },
+    ["<F8>"] = { "<cmd>:Files<CR>", desc = "Find files", },
+
+    -- clangformat
+    ["<leader>mm"] = { "<cmd>py3f /home/jokeo/tool/clang/tools/clang-format/clang-format.py<CR>", desc = "format cpp" },
+
     -- mappings seen under group name "Buffer"
     ["<leader>bD"] = {
       function()
@@ -28,18 +41,42 @@ return {
       desc = "Pick to close",
     },
     -- tables with the `name` key will be registered with which-key if it's installed
-    -- this is useful for naming menus
-    ["<leader>b"] = { name = "Buffers" },
     -- quick save
     ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+
+    --spectre
+    ["<leader>S"] = {
+      ":lua require(\'spectre\').open()<CR>",
+      desc = "Open spectre search"
+    },
+
+    ["<leader>sw"] = {
+      ":lua require(\'spectre\').open_visual({select_word=true})<CR>",
+      desc = "Search current word"
+    },
+
+    ["<leader>sp"] = {
+      "viw:lua require(\'spectre\').open_file_search()<CR>",
+      desc = "Search current buffer"
+    },
   },
 
   i = {
-    ["<C-s>"] = { "<C-c>:w!<CR>", desc = "Save File" },  -- change description but the same command
+    ["<C-s>"] = { "<C-c>:w!<CR>", desc = "Save File while insert" },  -- change description but the same command
   },
 
   t = {
     -- setting a mapping to false will disable it
     -- ["<esc>"] = false,
+  },
+
+  v = {
+    ["<leader>s"] = {
+      ":lua require(\'spectre\').open_visual()<CR>",
+      desc = "Search current block"
+    },
+
+    -- clangformat
+    ["<leader>mm"] = { "<cmd>py3f /home/jokeo/tool/clang/tools/clang-format/clang-format.py<CR>", desc = "format cpp" },
   },
 }

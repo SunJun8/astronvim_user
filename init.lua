@@ -55,7 +55,10 @@ return {
 
     -- enable servers that you already have installed without mason
     servers = {
-      -- "pyright"
+      "clangd",
+      "lua_ls",
+      "cmake",
+      "rust_analyzer",
     },
   },
 

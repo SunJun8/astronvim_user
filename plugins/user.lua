@@ -22,6 +22,10 @@ return {
   },
 
   {
-    "ojroques/nvim-lspfuzzy"
+    "ibhagwan/fzf-lua",
+    event = "BufEnter",
+    dependencies = {
+      'nvim-tree/nvim-web-devicons'
+    }
   },
 }
