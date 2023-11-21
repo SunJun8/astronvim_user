@@ -80,10 +80,10 @@ return {
     -- Set up custom filetypes
     vim.filetype.add {
       extension = {
-        defs = "makefile",
+        defs = "make",
       },
     --   filename = {
-    --     ["Foofile"] = "fooscript",
+    --     ["Make.defs"] = "make",
     --   },
     --   pattern = {
     --     ["~/%.config/foo/.*"] = "fooscript",
