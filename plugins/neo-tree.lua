@@ -3,11 +3,22 @@
 return {
   "nvim-neo-tree/neo-tree.nvim",
   enabled = true,
-  opts = {
-    filesystem = {
+  opts = function(_, opts)
+    opts.filesystem = {
       filtered_items = {
         visible = true,
       },
-    },
-  },
+      follow_current_file = {
+        enabled = true,
+      },
+    }
+
+    opts.buffers = {
+      follow_current_file = {
+        enabled = false,
+      },
+    }
+
+    return opts
+  end
 }
