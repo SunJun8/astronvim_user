@@ -9,14 +9,14 @@ return {
     -- second key is the lefthand side of the map
 
     -- navigate buffer tabs with `H` and `L`
-    -- L = {
-    --   function() require("astronvim.utils.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end,
-    --   desc = "Next buffer",
-    -- },
-    -- H = {
-    --   function() require("astronvim.utils.buffer").nav(-(vim.v.count > 0 and vim.v.count or 1)) end,
-    --   desc = "Previous buffer",
-    -- },
+    L = {
+      function() require("astronvim.utils.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end,
+      desc = "Next buffer",
+    },
+    H = {
+      function() require("astronvim.utils.buffer").nav(-(vim.v.count > 0 and vim.v.count or 1)) end,
+      desc = "Previous buffer",
+    },
 
     -- tables with the `name` key will be registered with which-key if it's installed
     -- this is useful for naming menus
@@ -25,11 +25,13 @@ return {
     ["<leader>g"] = { name = "LSP" },
 
     -- Neotree
+    ["<leader>e"] = false,
     ["<F4>"] = { "<cmd>Neotree toggle<CR>", desc = "Toggle Explorer" },
+    ["<leader>o"] = { "<cmd>Neotree toggle<CR>", desc = "Toggle Explorer" },
     ["<F8>"] = { "<cmd>:Files<CR>", desc = "Find files", },
 
     -- clangformat
-    ["<leader>mm"] = { "<cmd>py3f /home/jokeo/tool/clang/tools/clang-format/clang-format.py<CR>", desc = "format cpp" },
+    ["<leader>lm"] = { "<cmd>py3f /home/jokeo/tool/clang/tools/clang-format/clang-format.py<CR>", desc = "format cpp by clang-format" },
 
     -- mappings seen under group name "Buffer"
     ["<leader>bD"] = {
@@ -40,6 +42,7 @@ return {
       end,
       desc = "Pick to close",
     },
+
     -- tables with the `name` key will be registered with which-key if it's installed
     -- quick save
     ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
@@ -59,6 +62,25 @@ return {
       "viw:lua require(\'spectre\').open_file_search()<CR>",
       desc = "Search current buffer"
     },
+
+    -- close buffer
+    ["<leader>c"] = false,
+    ["<leader>x"] = {
+      function() require("astronvim.utils.buffer").close() end, desc = "Close buffer"
+    },
+    ["<leader>X"] = {
+      function() require("astronvim.utils.buffer").close(0, true) end, desc = "Force close buffer"
+    },
+
+    -- ["<leader>r"] = {
+    --   ":NvimTreeRefresh<CR>",
+    --   desc = "Refresh file"
+    -- },
+    --
+    -- ["<leader>o"] = {
+    --   ":NvimTreeFindFileToggle<CR>",
+    --   desc = "Toggle tree at current file"
+    -- },
   },
 
   i = {
@@ -67,7 +89,7 @@ return {
 
   t = {
     -- setting a mapping to false will disable it
-    -- ["<esc>"] = false,
+    ["<esc>"] = false,
   },
 
   v = {
@@ -77,6 +99,6 @@ return {
     },
 
     -- clangformat
-    ["<leader>mm"] = { "<cmd>py3f /home/jokeo/tool/clang/tools/clang-format/clang-format.py<CR>", desc = "format cpp" },
+    ["<leader>lm"] = { "<cmd>py3f /home/jokeo/tool/clang/tools/clang-format/clang-format.py<CR>", desc = "format cpp by clang format" },
   },
 }

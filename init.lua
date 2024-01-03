@@ -55,10 +55,6 @@ return {
 
     -- enable servers that you already have installed without mason
     servers = {
-      "clangd",
-      "lua_ls",
-      "cmake",
-      "rust_analyzer",
     },
   },
 

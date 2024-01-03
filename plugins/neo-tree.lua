@@ -20,5 +20,19 @@ return {
     }
 
     return opts
-  end
+  end,
+
+  -- config = function(_, opts)
+  --   local utils = require "astronvim.utils"
+  --   local get_icon = utils.get_icon
+  --
+  --   opts.sources = { "filesystem" }
+  --   opts.source_selector = {
+  --     winbar = true,
+  --     content_layout = "center",
+  --     sources = {
+  --       { source = "filesystem", display_name = get_icon("FolderClosed", 1, true) .. "File" }
+  --     }
+  --   }
+  -- end
 }

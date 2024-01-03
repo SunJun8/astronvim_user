@@ -4,11 +4,11 @@
       dependencies = {
         {
           "junegunn/fzf",
-          event = "BufEnter",
+          -- event = "BufEnter",
         },
         {
           "junegunn/fzf.vim",
-          event = "BufEnter",
+          -- event = "BufEnter",
         }
       },
       event = "BufEnter",

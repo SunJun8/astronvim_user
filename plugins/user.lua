@@ -20,12 +20,21 @@ return {
       vim.g.sonokai_diagnostic_text_highlight = false
     end,
   },
-
   {
     "ibhagwan/fzf-lua",
     event = "BufEnter",
     dependencies = {
       'nvim-tree/nvim-web-devicons'
     }
+  },
+  {
+    "mfussenegger/nvim-dap",
+    enabled = false,
+    dependencies = {
+    },
+  },
+  { -- TODO: REMOVE neovim-session-manager with AstroNvim v4
+    "Shatur/neovim-session-manager",
+    enabled = false,
   },
 }
