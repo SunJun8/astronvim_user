@@ -11,7 +11,7 @@
           -- event = "BufEnter",
         }
       },
-      event = "BufEnter",
+      event = "User AstroFile",
     },
 
   }

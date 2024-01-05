@@ -2,7 +2,12 @@ return {
   "dhananjaylatkar/cscope_maps.nvim",
   event = "BufEnter",
   dependencies = {
-    "ibhagwan/fzf-lua",
+    {
+      "ibhagwan/fzf-lua",
+      dependencies = {
+        'nvim-tree/nvim-web-devicons'
+      }
+    }
   },
   opts = {
     prefix = "<leader>c", -- prefix to trigger maps

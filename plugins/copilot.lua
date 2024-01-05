@@ -7,7 +7,7 @@ return {
   cmd = "Copilot",
   build = ":Copilot auth",
   autoStart = true,
-  event = "BufEnter",
+  event = "InsertEnter",
   dependencies = {
     "zbirenbaum/copilot-cmp",
     config = function ()

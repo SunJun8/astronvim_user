@@ -21,13 +21,6 @@ return {
     end,
   },
   {
-    "ibhagwan/fzf-lua",
-    event = "BufEnter",
-    dependencies = {
-      'nvim-tree/nvim-web-devicons'
-    }
-  },
-  {
     "mfussenegger/nvim-dap",
     enabled = false,
     dependencies = {
