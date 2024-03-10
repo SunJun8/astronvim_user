@@ -18,6 +18,7 @@ return {
       vim.g.sonokai_disable_italic_comment = true
       vim.g.sonokai_transparent_background = false
       vim.g.sonokai_diagnostic_text_highlight = false
+      vim.g.sonokai_transparent_background = 2
     end,
   },
   {
