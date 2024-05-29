@@ -7,6 +7,9 @@ return {
     spell = false, -- sets vim.opt.spell
     signcolumn = "auto", -- sets vim.opt.signcolumn to auto
     wrap = false, -- sets vim.opt.wrap
+    tabstop = 2, -- number of space in a tab
+    shiftwidth = 2, -- number of space inserted for indentation
+    expandtab = true, -- enable the use of space in tab
   },
   g = {
     mapleader = ",", -- sets vim.g.mapleader

@@ -9,7 +9,6 @@ return {
       opts.ensure_installed = require("astronvim.utils").list_insert_unique(opts.ensure_installed, {
         "clangd",
         "lua_ls",
-        "cmake",
         "rust_analyzer",
       })
     end,

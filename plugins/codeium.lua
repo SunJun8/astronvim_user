@@ -4,7 +4,7 @@ return {
   -- build = ":Copilot auth",
   -- autoStart = true,
   "Exafunction/codeium.vim",
-  enabled = true,
+  enabled = false,
   -- cmd = "Codeium",
   -- build = ":Codeium Auth",
   event = "BufEnter",
